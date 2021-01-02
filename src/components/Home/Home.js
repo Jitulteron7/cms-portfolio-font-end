@@ -10,7 +10,7 @@ const Home =()=>{
                     <h1>
                         About 
                     </h1>
-                    <p>{moment("20191030", "YYYYMMDD").fromNow()}</p>
+                    <p>{moment().format(' h:mm a - MMM D, YYYY')}</p>
                     {/* moment('January 1st 2020, 6:15:14 pm','MMMM Do YYYY, h:mm:ss a') */}
                     <p>{ moment(date,'MMMM Do YYYY, h:mm:ss a').format("YYYYMMDD")}</p>
                     <p>Hi my name is Jitul Teron currently pursing Bachlor of Technology fron National Institue if Technology </p>

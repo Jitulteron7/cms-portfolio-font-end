@@ -57,7 +57,7 @@ const Contents=()=>{
                         <div onClick={()=>{History.push("/blog/contentno/"+info._id)}} id="contentView">
                             <img src={"https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"}/>
                             <div className="write">
-                            <h6>{moment(info.time,'MMMM Do YYYY, h:mm:ss a').fromNow()} </h6>
+                            <h6>{moment(info.time,' h:mm a - MMM D, YYYY').fromNow()} </h6>
                                 <h5>{info.title.substring(0,50)+" ..."}</h5>
                                 
                                 <h6>{info.readTime} min content</h6>

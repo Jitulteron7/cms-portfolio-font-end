@@ -22,7 +22,7 @@ const CreateContent=()=>{
     const Submit= async ()=>{
         
         const url="http://localhost:5000/admin/dashboard/editor";
-        const time=moment().format('MMMM Do YYYY, h:mm:ss a');
+        const time=moment().format(' h:mm a - MMM D, YYYY');
         
         try{
             fetch(url,{

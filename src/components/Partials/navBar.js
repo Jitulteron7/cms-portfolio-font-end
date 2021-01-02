@@ -124,8 +124,8 @@ const Navbar=(props)=>{
                     
                         <ul>
                             <li><Link to="/">About</Link></li>
+                            <li><Link to="/works">My Works</Link></li>
                             <li><Link to="/blogs">Blogs</Link></li>
-                            <li><Link to="/works">My works</Link></li>
                             <li><Link to="/contact">Contact me </Link></li>
                             {/* <li>Blogs</li>
                             <li>My works</li>

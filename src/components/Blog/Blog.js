@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from "react";
-
 import {Link, useHistory} from "react-router-dom";
+import moment from "moment";
 const Blog =()=>{
 const [info,setInfo]=useState([]);
 const History=useHistory();
@@ -209,7 +209,8 @@ const History=useHistory();
                                                 <img src={data.banner} />
                                                 <div className="content">
                                                     <ul>
-                                                    <li><span>8th oct 2020</span></li>
+                                                    <li className="blogListNew"><span>{data.time}</span>
+                                                    <span>{data.readTime} min</span></li>
                                                     <li>
                                                     <h4>{data.title}</h4>
                                                     </li>
@@ -217,6 +218,9 @@ const History=useHistory();
                                                         <p>
                                                             <div dangerouslySetInnerHTML={{__html:data.sanitizedHTML.substring(0,200)+" ..."}} />
                                                         </p>
+                                                    </li>
+                                                    <li>
+                                                        {moment(data.time,' h:mm a - MMM D, YYYY').fromNow()}
                                                     </li>
                                                     </ul>
                                                 </div>
