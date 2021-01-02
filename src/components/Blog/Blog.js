@@ -200,11 +200,33 @@ const History=useHistory();
                 </div>
                 <div className="scroll">
                 <div  className="innerwrapper2">
+                        <div className="scrollHere">
                         {
                             info.map(data=>{
                                 return(
                                     <>
                                     {
+                                        <>
+                                        <div onClick={()=>{History.push("/blog/contentno/"+data._id)}} className="card-shade">
+                                                <img src={data.banner} />
+                                                <div className="content">
+                                                    <ul>
+                                                    <li className="blogListNew"><span>{data.time}</span>
+                                                    <span>{data.readTime} min</span></li>
+                                                    <li>
+                                                    <h4>{data.title}</h4>
+                                                    </li>
+                                                    <li>
+                                                        <p>
+                                                            <div dangerouslySetInnerHTML={{__html:data.sanitizedHTML.substring(0,240)+" ..."}} />
+                                                        </p>
+                                                    </li>
+                                                    <li className="blogPastPresent">
+                                                        {moment(data.time,' h:mm a - MMM D, YYYY').fromNow()}
+                                                    </li>
+                                                    </ul>
+                                                </div>
+                                        </div>
                                         <div onClick={()=>{History.push("/blog/contentno/"+data._id)}} className="card-shade">
                                                 <img src={data.banner} />
                                                 <div className="content">
@@ -219,18 +241,20 @@ const History=useHistory();
                                                             <div dangerouslySetInnerHTML={{__html:data.sanitizedHTML.substring(0,200)+" ..."}} />
                                                         </p>
                                                     </li>
-                                                    <li>
+                                                    <li className="blogPastPresent">
                                                         {moment(data.time,' h:mm a - MMM D, YYYY').fromNow()}
                                                     </li>
                                                     </ul>
                                                 </div>
                                         </div>
+                                        </>
                                     
                                     }
                                     </>
                                 )
                             })
                         }
+                        </div>
                         {/* {
                             info.map(data=>{
                                 return(
