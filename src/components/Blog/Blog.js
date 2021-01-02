@@ -191,12 +191,12 @@ const History=useHistory();
                                 </ol>
                         </div>
                     </div>
-                    <div className="pagination">
+                    {/* <div className="pagination">
                             <a>&#9664;</a>
                             <a>2</a>
                             <a>3</a>
                             <a>&#9658;</a>
-                        </div>
+                        </div> */}
                 </div>
                 <div className="scroll">
                 <div  className="innerwrapper2">

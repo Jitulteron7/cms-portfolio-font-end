@@ -144,12 +144,12 @@
         }
     }
     .innerwrapper2{
-        display: flex;
+        display: block;
         padding-top: 10px;
         // grid-template-columns: repeat(1, 50% 50%);
         // grid-template-rows: repeat(1, 33% 33% 33% );
         // grid-gap: 10px;
-          flex-wrap: wrap;
+          
         // justify-content:center ;
         // align-items: center;
         .card-shade{
