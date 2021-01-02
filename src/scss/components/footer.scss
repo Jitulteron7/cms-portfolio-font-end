@@ -1,0 +1,128 @@
+.footerWrapper{
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(1,25% 25% 25% 25%);
+    background-color: var(--whiteColor);
+    align-content: center;
+    padding: 0 5%;
+    justify-content: center;
+    a{
+        text-decoration: none;
+    }
+    h3{
+           font-weight: bolder;
+           font-size: 1.2rem; 
+           color: var(--blackColor);
+    }
+    div{
+        ul{
+            list-style: none;
+            li{
+                    color: var(--blackColor);
+                    padding:12px 0px;
+                    
+                    
+            }
+        }
+        
+    }
+    .div2{
+        ul{
+            display: grid;
+            grid-template-columns: repeat(1,25% 25% 25% 25%);
+            padding-top: 40px;
+            li{
+                .fab{
+                    font-size: 1.4em;
+                    
+                }
+            }
+        }
+    }
+    .logo{
+        color:var(--blackColor);
+        p{
+            color: var(--blackColor);
+            padding: 40px 0;
+        }
+    }
+    .div3 {
+        a{
+            
+            text-decoration: none;
+            color: var(--TextColor);
+            font-size: 1.2rem;
+        }
+        a:hover{
+            color: darken($lightestTextColor, 10%);
+        }
+    }
+}
+
+@media screen and (max-width:950px){
+ .footerWrapper{
+    padding: 0 2%;
+    h3{
+        font-weight: bolder;
+        font-size: 1.1rem; 
+    }
+    h1{
+        font-size: 1.8rem;
+    }
+    .logo{
+       
+        p{
+            padding: 30px 0;
+        }
+    }
+    .div2{
+        li{
+            .fab{
+                font-size: 1.2rem;
+            }
+        }
+    }
+    .div3{
+        
+            a{
+                font-size: 1rem;
+            }
+        
+    }
+    
+ 
+ }   
+}
+@media screen and (max-width:760px){
+    
+.footerWrapper{
+    height:auto;
+    display: grid;
+    grid-template-columns: repeat(1,80%);
+    background-color: var(--whiteColor);
+    padding: 4% 7%;
+    align-content: center;
+    justify-content: center;
+    h1{
+        font-size: 2rem;
+    }
+    h3{
+        font-size: 1.4rem;
+        margin-top: 30px;
+    }
+    .div2{
+        .fab{
+            font-size: 2rem;
+        }
+
+    }
+    .div3{
+        a{
+            font-size: 1.2rem;
+        }
+    }
+    
+}
+
+
+}

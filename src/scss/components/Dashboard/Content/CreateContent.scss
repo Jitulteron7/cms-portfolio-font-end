@@ -1,0 +1,113 @@
+.editor{
+    padding: 1.5% 3%;
+    header{
+        width: 100%;
+        height: 60px;
+        border-bottom: solid 1px  lighten(grey,30%);
+    }
+    .write-here{
+        input:nth-child(1){
+            
+            width:90%;
+            padding: 20px;
+            border: 1px lighten(grey,30%) solid;
+            margin: 30px;
+            font-size: 1.2rem;
+        }
+        input:nth-child(2){
+            
+            // width:520px;
+            padding: 20px;
+            border: 1px lighten(grey,30%) solid;
+            margin: 30px;
+            margin-top:0px !important ;
+            font-size: 1.2rem;
+        }
+        input:nth-child(3){
+            
+            // width:520px;
+            padding: 20px;
+            border: 1px lighten(grey,30%) solid;
+            margin: 30px;
+            margin-top:0px !important ;
+            font-size: 1.2rem;
+        }
+        input::placeholder{
+            font-size: 1.2rem;
+        }
+        textarea{
+            padding: 20px;
+            display: block;
+            width: 100%;
+            height: auto;
+            min-height: 750px;
+        }
+        select{
+            // width:520px;
+            padding: 20px;
+            border: 1px lighten(grey,30%) solid;
+            margin: 30px;
+            margin-top:0px !important ;
+            font-size: 1.2rem;
+        }
+       
+       .tooltip {
+        position: relative;
+        
+      }
+      
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: 80%;
+        left: 50%;
+        margin-left: -75px;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      
+      .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+      }
+      
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
+      .imglink{
+        margin: 10px;
+        background-color:#fff;
+         .linkIs{
+             padding: 10px;
+             padding-left: 3%;
+             background-color: aqua;
+             .linklink{
+                 width: 90% ;
+                 height: auto !important;
+                 margin: 10px;
+                 padding: 5px;
+                 background-color: black;
+                 color:#fff
+             }
+             .linklink:hover{
+                 cursor: pointer;
+             }
+             
+         }   
+    }
+    }
+    @include button;
+}

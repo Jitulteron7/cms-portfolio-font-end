@@ -1,0 +1,13 @@
+.container{
+    padding: 3% 3%;
+    
+}
+.container-inner{
+    padding: 1.5% 3%;
+}
+
+@media  screen and (max-width:1300px){
+    .container-inner{
+        padding: 1% 2%;
+    }
+}

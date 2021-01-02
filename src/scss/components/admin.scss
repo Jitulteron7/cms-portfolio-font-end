@@ -1,0 +1,24 @@
+.adminContainer{
+    display: flex;
+    padding: 15%;
+    justify-content: center;
+    align-items: center !important;
+    .adminContent{
+        padding: 2% 3%;
+        background-color: var(--whiteColor);
+        width: 54%;
+        @include shadow;
+        
+        input{
+            width: 300px;
+            margin: 10px;
+            padding: 10px;
+            font-size: 1.2rem;
+        }
+        .check{
+            width: auto !important;
+            justify-content:start;
+        }
+        @include button;
+    }
+}

@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+// $font-stack:Arial,Helvetica,sans-serif;
+$font-stack: Rubik,Avenir,Helvetica,Arial,sans-serif;
+$lightestTextColor:#9a9797;
+$themeColorDark:#000;
+// theme in v 2.0
+
+:root{
+    --backgroundColor:#eeeeee;
+    --lightMode:#fff;
+    --themeColorBlue:royalblue;
+    --themeColorViolet:darkorchid;
+    --themeColorOrange:orange;
+    --whiteColor:#fff;
+    --blackColor:#343a40;
+    --darkColor:#2a4763;
+    --redColor:red;
+    --TextColor:#9a9797;
+    --TextColor2:#000;
+    --lightestTextColor:#fff;
+    --navbarBColor:#fff;
+}

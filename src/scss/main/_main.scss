@@ -1,0 +1,45 @@
+// variables 
+@import "../config/variables";
+
+// utils
+@import "../utils/utils";
+
+// mixin
+@import "../config/mixin";
+
+
+
+// basic setup
+@import "../base/base";
+
+// navbar
+@import "../components/navbar.scss";
+
+// home
+@import "../components/home.scss";
+
+// topics
+@import "../components/topics.scss";
+
+// category
+@import "../components/category.scss";
+
+
+
+// dashboard 
+@import "../components/Dashboard/dashBoard.scss";
+// dashboard-contents
+@import "../components/Dashboard/Content/contents.scss";
+// dashboard-create-content
+@import "../components/Dashboard/Content/CreateContent.scss";
+
+
+// admin
+@import "../components/admin.scss";
+// blog main page
+@import "../components/blog.scss";
+
+// footer
+@import "../components/footer.scss";
+
+
