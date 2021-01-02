@@ -106,6 +106,7 @@ const History=useHistory();
         }
         })
     }
+    
     return(<>
      <nav className="nav2">
                        <a className="logo">Blog</a>
@@ -199,33 +200,54 @@ const History=useHistory();
                         </div>
                 </div>
                 <div className="scroll">
-                <div  className="innerwrapper2">
+                <div  className="innerwrapper2 ">
                         {
                             info.map(data=>{
                                 return(
                                     <>
                                     {
+                                        <div className="insideThis">
                                         <div onClick={()=>{History.push("/blog/contentno/"+data._id)}} className="card-shade">
                                                 <img src={data.banner} />
                                                 <div className="content">
                                                     <ul>
-                                                    <li className="blogListNew"><span>{data.time}</span>
-                                                    <span>{data.readTime} min</span></li>
-                                                    <li>
-                                                    <h4>{data.title}</h4>
-                                                    </li>
-                                                    <li>
-                                                        <p>
-                                                            <div dangerouslySetInnerHTML={{__html:data.sanitizedHTML.substring(0,200)+" ..."}} />
-                                                        </p>
-                                                    </li>
-                                                    <li>
-                                                        {moment(data.time,' h:mm a - MMM D, YYYY').fromNow()}
-                                                    </li>
+                                                        <li className="blogListNew"><span>{data.time}</span>
+                                                        <span>{data.readTime} min</span></li>
+                                                        <li>
+                                                        <h4>{data.title}</h4>
+                                                        </li>
+                                                        <li>
+                                                            <p>
+                                                                <div dangerouslySetInnerHTML={{__html:data.sanitizedHTML.substring(0,120)+" ..."}} />
+                                                            </p>
+                                                        </li>
                                                     </ul>
+                                                    <div className="at">
+                                                        {moment(data.time,' h:mm a - MMM D, YYYY').fromNow()}
+                                                    </div>
                                                 </div>
                                         </div>
-                                    
+                                        {/* <div onClick={()=>{History.push("/blog/contentno/"+data._id)}} className="card-shade">
+                                                <img src={data.banner} />
+                                                <div className="content">
+                                                    <ul>
+                                                        <li className="blogListNew"><span>{data.time}</span>
+                                                        <span>{data.readTime} min</span></li>
+                                                        <li>
+                                                        <h4>{data.title}</h4>
+                                                        </li>
+                                                        <li>
+                                                            <p>
+                                                                <div dangerouslySetInnerHTML={{__html:data.sanitizedHTML.substring(0,120)+" ..."}} />
+                                                            </p>
+                                                        </li>
+                                                    </ul>
+                                                    <div className="at">
+                                                        {moment(data.time,' h:mm a - MMM D, YYYY').fromNow()}
+                                                    </div>
+                                                </div>
+                                        </div> */}
+                                    </div>
                                     }
                                     </>
                                 )
