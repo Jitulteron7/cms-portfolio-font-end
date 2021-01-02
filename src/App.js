@@ -15,7 +15,7 @@ import EditContent from "./components/DashBoard/Content/Edit";
 import Contents  from "./components/DashBoard/Content/Contents";
 import ViewPost from "./components/DashBoard/Content/ViewPost";
 import {initialState,AdminReducer} from "./Reducer/AdminReducer";
-
+import Works from "./components/Works/Work";
 export const AdminContext=createContext();
 
 const Router=()=>{
@@ -83,6 +83,11 @@ const History=useHistory()
               <Route exact path="/topic">
                   <NavBar/>
                     <Topic/>
+                  <Footer/> 
+              </Route>
+              <Route exact path="/works">
+                  <NavBar/>
+                    <Works/>
                   <Footer/> 
               </Route>
               {/* dashboar options */}
