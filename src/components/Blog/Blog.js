@@ -123,8 +123,9 @@ const History=useHistory();
                 <div className="innerwrapper1">
                     <div  >
                         <div className="search">
-                            <input type="search" placeholder="search..."/>
-                            <button ><i class="fas fa-search"></i></button>
+                            {/* <input type="search" placeholder="search..."/>
+                            <button ><i class="fas fa-search"></i></button> */}
+                            <div><h3>Quick Pick</h3></div>
                         </div>
                     </div>
                     <div  className="biggers1">
