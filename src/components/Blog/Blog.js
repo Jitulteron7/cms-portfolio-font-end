@@ -123,8 +123,9 @@ const History=useHistory();
                 <div className="innerwrapper1">
                     <div  >
                         <div className="search">
-                            <input type="search" placeholder="search..."/>
-                            <button ><i class="fas fa-search"></i></button>
+                            {/* <input type="search" placeholder="search..."/>
+                            <button ><i class="fas fa-search"></i></button> */}
+                            <div><h3>Quick Pick</h3></div>
                         </div>
                     </div>
                     <div  className="biggers1">
@@ -191,20 +192,42 @@ const History=useHistory();
                                 </ol>
                         </div>
                     </div>
-                    <div className="pagination">
+                    {/* <div className="pagination">
                             <a>&#9664;</a>
                             <a>2</a>
                             <a>3</a>
                             <a>&#9658;</a>
-                        </div>
+                        </div> */}
                 </div>
                 <div className="scroll">
                 <div  className="innerwrapper2">
+                        <div className="scrollHere">
                         {
                             info.map(data=>{
                                 return(
                                     <>
                                     {
+                                        <>
+                                        <div onClick={()=>{History.push("/blog/contentno/"+data._id)}} className="card-shade">
+                                                <img src={data.banner} />
+                                                <div className="content">
+                                                    <ul>
+                                                    <li className="blogListNew"><span>{data.time}</span>
+                                                    <span>{data.readTime} min</span></li>
+                                                    <li>
+                                                    <h4>{data.title}</h4>
+                                                    </li>
+                                                    <li>
+                                                        <p>
+                                                            <div dangerouslySetInnerHTML={{__html:data.sanitizedHTML.substring(0,240)+" ..."}} />
+                                                        </p>
+                                                    </li>
+                                                    <li className="blogPastPresent">
+                                                        {moment(data.time,' h:mm a - MMM D, YYYY').fromNow()}
+                                                    </li>
+                                                    </ul>
+                                                </div>
+                                        </div>
                                         <div onClick={()=>{History.push("/blog/contentno/"+data._id)}} className="card-shade">
                                                 <img src={data.banner} />
                                                 <div className="content">
@@ -219,18 +242,20 @@ const History=useHistory();
                                                             <div dangerouslySetInnerHTML={{__html:data.sanitizedHTML.substring(0,200)+" ..."}} />
                                                         </p>
                                                     </li>
-                                                    <li>
+                                                    <li className="blogPastPresent">
                                                         {moment(data.time,' h:mm a - MMM D, YYYY').fromNow()}
                                                     </li>
                                                     </ul>
                                                 </div>
                                         </div>
+                                        </>
                                     
                                     }
                                     </>
                                 )
                             })
                         }
+                        </div>
                         {/* {
                             info.map(data=>{
                                 return(
